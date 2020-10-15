@@ -1,1 +1,13 @@
 @import '~bootstrap/scss/bootstrap';
+
+
+h1 {
+  text-align: center;
+}
+
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
