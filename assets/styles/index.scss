@@ -1,13 +1,24 @@
 @import '~bootstrap/scss/bootstrap';
 
 
-h1 {
+#title {
   text-align: center;
+  background-color: navy;
+  color: LightSkyBlue
 }
 
+button {
+  background-color: navy;
+  color: LightSkyBlue
+}
 
-nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.container {
+  height: 100vh;
+}
+
+.board {
+  margin: auto;
+  max-height: calc(100vh - 75px);
+  max-width: calc(100vh - 75px);
+  background-color: ('public/fern.jpg') no-repeat center center
 }

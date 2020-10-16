@@ -1,41 +1,103 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Tic-Tac-Toe</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
+<head>
+  <title>Tic-Tac-Toe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
 
-    <body>
-      <h1 id='title'>Tic-Tac Toe</h1>
-      <nav>
-        <form id='sign-up'>
-          <label for="credentials"
-          <input name="credentials[email]" type="text" value="youremail@email.com">
-          <input name="credentials[password]" type="password" value="password">
-          <input name="credentials[password_confirmation]" type="password" value="confirm password">
-        </form>
+<body>
+  <h1 id='title' >Tic-Tac-Toe</h1>
 
-        <form id="sign-in">
-          <p>Sign In</p>
-          <input name="credentials[email]" type="text" value="an@example.email">
-          <input name="credentials[password]" type="password" value="an example password">
-          <input name="credentials[password_confirmation]" type="password" value="an example password">
-        </form>
+  <form id='sign-up'>
 
-        <div id="signout">
-          <br/>
-          <button id="sign-out">Sign Out</button>
-        </div>
+    <fieldset>
+      <label>Sign Up:</label>
 
-      </nav>
+      <label>E-Mail
+        <input name="credentials[email]" type="text" value="">
+      </label>
+
+      <label>Password
+        <input name="credentials[password]" type="password" value="">
+      </label>
 
 
-      <footer>
-      </footer>
-    </body>
+      <label>Password Confirmation
+        <input name="credentials[password_confirmation]" type="password" value="">
+      </label>
+<button id="signupbutton">Sign Up</button>
+    </fieldset>
+  </form>
+
+
+
+
+  <form id="sign-in">
+
+    <fieldset>
+      <label>Sign In:</label>
+      <label>Email
+        <input name="credentials[email]" type="text" value="">
+      </label>
+      <label>Password
+        <input name="credentials[password]" type="password" value="">
+      </label>
+      <label>Password Confirmation
+        <input name="credentials[password_confirmation]" type="password" value="">
+      </label>
+      <button id="signinbutton">Sign In</button>
+    </fieldset>
+  </form>
+
+
+  <form id="change-password">
+
+    <fieldset>
+      <label>Change Password:</label>
+      <label>Email
+        <input name="credentials[email]" type="text" value="">
+      </label>
+      <label>Old Password
+        <input name="credentials[password]" type="password" value="">
+      </label>
+      <label>New Password
+        <input name="credentials[password_confirmation]" type="password" value="">
+      </label>
+      <button id="changepasswordbutton">Change Password</button>
+    </fieldset>
+  </form>
+
+
+  <div id="signout">
+    <button id="signoutbutton">Sign Out</button>
+  </div>
+
+
+  <section class="container">
+
+    <div class= "row board h-100">
+
+        <div class="col-4 box"></div>
+        <div class="col-4 box"></div>
+        <div class="col-4 box"></div>
+
+        <div class="col-4 box"></div>
+        <div class="col-4 box"></div>
+        <div class="col-4 box"></div>
+
+        <div class="col-4 box"></div>
+        <div class="col-4 box"></div>
+        <div class="col-4 box"></div>
+
+    </div>
+
+  </section>
+
+
+</body>
 </html>
