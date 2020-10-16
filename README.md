@@ -12,3 +12,10 @@ Next we need to configure the signUp and signIn forms
 
 As a  new user I need to be able to sign up
 We need to set up a form and be able to submit to the console
+
+
+As a user I want to play the game
+
+Added the boxes needed to play the game with bootstrap div tags
+and touched them up with a color scheme and some extra special css properties.
+(Based off the Seattle Seahawks color scheme that I love)
