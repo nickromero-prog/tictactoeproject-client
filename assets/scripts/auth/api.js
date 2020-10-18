@@ -1,4 +1,5 @@
-//event listeners
+// api calls
+const config = require('./../config')
 
 const signUp = function (data) {
   return $.ajax({
@@ -6,14 +7,14 @@ const signUp = function (data) {
     method: 'POST',
     data: data
   })
-};
+}
 const signIn = function (data) {
   return $.ajax({
     url: config.apiUrl + '/sign-in',
     method: 'POST',
     data: data
   })
-};
+}
 
 const signOut = function () {
   return $.ajax({
@@ -21,19 +22,19 @@ const signOut = function () {
     method: 'DELETE',
     data: data
   })
-};
+}
 
 const changePassword = function () {
   return $.ajax({
-    url: config.apiUrl +'/change-password',
+    url: config.apiUrl + '/change-password',
     method: 'PATCH',
-    data: data,
+    data: data
   })
-};
+}
 
 
-module.exports {
+module.exports = {
   signUp,
   signIn,
   signOut
-};
+}

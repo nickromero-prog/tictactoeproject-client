@@ -7,16 +7,20 @@ body {
 #title {
   text-align: center;
   background-color: #02075d;
-  color: LightSkyBlue
+  color: LightSkyBlue;
+  border: #e3fbe3;
+  border-style: outset;
 }
 
 input {
-  background-color: #e3fbe3
+  background-color: #e3fbe3;
+
 }
 
 button {
   background-color: #02075d;
-  color: LightSkyBlue
+  color: LightSkyBlue;
+  border-radius: 40px;
 }
 
 .container {
@@ -28,7 +32,7 @@ button {
   max-height: calc(100vh - 75px);
   max-width: calc(100vh - 75px);
   background-color: ('public/fern.jpg') no-repeat center center;
-  background-size: cover
+  background-size: cover;
 }
 
 .box {
