@@ -19,3 +19,9 @@ As a user I want to play the game
 Added the boxes needed to play the game with bootstrap div tags
 and touched them up with a color scheme and some extra special css properties.
 (Based off the Seattle Seahawks color scheme that I love)
+
+As a user I want to play a game that looks nice
+
+Added some css to the game to give it a better design for the user to interact
+with and it also helps me see a little bit more of my end goal motivating me
+to make it completely functional.

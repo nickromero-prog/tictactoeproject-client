@@ -1,14 +1,15 @@
 'use strict'
 
-const events = require ('./auth/events')
+const events = require('./auth/events')
 
 $(() => {
-  $('#sign-up').on('submit', events.onSignUp),
-  $('#sign-in').on('submit', events.onSignIn),
-  $('#sign-out').on('submit', events.onSignOut),
-  $('#change-password').on('submit', events.onChangePassword)
+  $('#signupbutton').on('submit', events.onSignUp)// need to put event handler here)
+  $('#signinbutton').on('submit', events.onSignIn)// need to put event handler here)
+  $('#changepasswordbutton').on('submit', events.onChangePassword) // need to put event handler here)
+  $('#signoutbutton').on('click', events.onSignOut)// need to put event handler here)
+  $('#resetbutton').on('click', )// need to put event handler here)
 })
-//the game is WORKING!!
+
 $(() => {
   // Start the player at X
   let currentPlayer = '✕'
