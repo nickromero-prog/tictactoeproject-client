@@ -31,22 +31,6 @@ const signInFailure = function (error) {
   console.error('signInFailure ran. Error is :', error)
 }
 
-const signOutSuccess = function () {
-  $('#message').text('Signed out successfully')
-  $('#message').removeClass()
-  $('#message').addClass('success')
-  $('form').trigger('reset')
-  console.log('signOutSuccess ran and nothing was returned!')
-  store.user = null
-}
-
-const signOutFailure = function (error) {
-  $('#message').text('Error on sign out')
-  $('#message').removeClass()
-  $('#message').addClass('failure')
-  console.error('signOutFailure ran. Error is :', error)
-}
-
 const changePasswordSuccess = function () {
   $('#message').text('Changed password successfully')
   $('#message').removeClass()
@@ -66,8 +50,6 @@ module.exports = {
   signUpFailure,
   signInSuccess,
   signInFailure,
-  signOutSuccess,
-  signOutFailure,
   changePasswordSuccess,
   changePasswordFailure
 }

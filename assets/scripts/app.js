@@ -3,16 +3,10 @@
 const events = require('./auth/events')
 
 $(() => {
-  $('#signupbutton').on('submit', events.onSignUp)// need to put event handler here)
+  $('#sign-up-form').on('submit', events.onSignUp)// need to put event handler here)
   $('#signinbutton').on('submit', events.onSignIn)// need to put event handler here)
   $('#changepasswordbutton').on('submit', events.onChangePassword) // need to put event handler here)
-  $('#signoutbutton').on('click', events.onSignOut)// need to put event handler here)
-  $('#resetbutton').on('click', events.)// need to put event handler here)
 })
-
-
-
-
 
 $(() => {
   // Start the player at X

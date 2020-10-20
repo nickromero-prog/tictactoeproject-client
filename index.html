@@ -14,39 +14,37 @@
   <h1 id='title'>TIC x TAC x TOE</h1>
 
   <form id='sign-up'>
-
     <fieldset>
-      <label>Sign Up:</label>
+      <legend>Sign Up</legend>
 
-      <label>E-Mail
-        <input name="credentials[email]" type="text" value="an@example.email">
-      </label>
+        <label for="sign-up-email">Email</label>
+          <input id="sign-up-email" type="email" name="credentials[email]" placeholder="Email">
 
-      <label>Password
-        <input name="credentials[password]" type="password" value="anexamplepassword">
-      </label>
+          <label for="sign-up-password">Password</label>
+            <input id="sign-up-password" type="password" name="credentials[password]" placeholder="password">
 
-      <label>Password Confirmation
-        <input name="credentials[password_confirmation]" type="password" value="anexamplepassword">
-      </label>
+            <label for="sign-up-password_confirmation">Password Confirmation</label>
+              <input id="sign-up-password_confirmation" type="password" name="credentials[password]" placeholder="password">
 
-      <button id="signupbutton">Sign Up</button>
+                <input id="signupbutton" type="submit" value="Sign Up">
+                  <p id="message"></p>
+
     </fieldset>
   </form>
 
 
-  <form id="sign-in">
+  <form id='sign-in'>
 
     <fieldset>
-      <label>Sign In:</label>
-      <label>Email
-        <input name="credentials[email]" type="text" value="">
-      </label>
-      <label>Password
-        <input name="credentials[password]" type="password" value="">
-      </label>
-      <input type="submit" id="signinbutton" value="Sign In">
-
+      <legend>Sign In</legend>
+        <label for="sign-in-email">Email</label>
+          <input id="sign-in-email" type="email" name="credentials[email]" placeholder="Email">
+          <label for="sign-in-password">Password</label>
+            <input id="sign-in-password" type="password" name="credentials[password]" placeholder="password">
+            <label for="sign-in-password_confirmation">Password Confirmation</label>
+              <input id="sign-in-password_confirmation" type="password" name="credentials[password]" placeholder="password">
+                <input id="signinbutton" type="submit" value="Sign In">
+                  <p id="message"></p>
     </fieldset>
   </form>
 
