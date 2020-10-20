@@ -4,8 +4,8 @@ const events = require('./auth/events')
 
 $(() => {
   $('#sign-up-form').on('submit', events.onSignUp)// need to put event handler here)
-  $('#signinbutton').on('submit', events.onSignIn)// need to put event handler here)
-  $('#changepasswordbutton').on('submit', events.onChangePassword) // need to put event handler here)
+  $('#sign-in-form').on('submit', events.onSignIn)// need to put event handler here)
+  $('#change-password-form').on('submit', events.onChangePassword) // need to put event handler here)
 })
 
 $(() => {

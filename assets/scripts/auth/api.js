@@ -3,17 +3,19 @@
 const config = require('../config')
 const store = require('../store')
 
-const signUp = function (formData) {
+const signUp = function (data) {
   return $.ajax({
     url: config.apiUrl + '/sign-up/',
-    method: 'POST'
+    method: 'POST',
+    data: data
   })
 }
 
-const signIn = function (formData) {
+const signIn = function (data) {
   return $.ajax({
     url: config.apiUrl + '/sign-in/',
-    method: 'POST'
+    method: 'POST',
+    data: data
   })
 }
 
