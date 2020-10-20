@@ -7,8 +7,12 @@ $(() => {
   $('#signinbutton').on('submit', events.onSignIn)// need to put event handler here)
   $('#changepasswordbutton').on('submit', events.onChangePassword) // need to put event handler here)
   $('#signoutbutton').on('click', events.onSignOut)// need to put event handler here)
-  $('#resetbutton').on('click', )// need to put event handler here)
+  $('#resetbutton').on('click', events.)// need to put event handler here)
 })
+
+
+
+
 
 $(() => {
   // Start the player at X

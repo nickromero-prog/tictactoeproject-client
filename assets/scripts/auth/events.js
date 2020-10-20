@@ -2,7 +2,6 @@
 'use strict'
 
 const getFormFields = require('../../../lib/get-form-fields')
-
 const api = require('./api')
 const ui = require('./ui')
 
@@ -10,7 +9,8 @@ const onSignUp = function (event) {
   event.preventDefault()
   console.log('what is happening', event)
 
-  const data = getFormFields(this)
+  const form = event.target
+  const formData = getFormFields(form)
   api.signUp(data)
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
@@ -18,9 +18,9 @@ const onSignUp = function (event) {
 
 const onSignIn = function (event) {
   event.preventDefault()
-  console.log('sign in ran!')
 
-  const data = getFormFields(this)
+  const form = event.target
+  const formData = getFormFields(form)
   api.signIn(data)
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)
@@ -28,7 +28,6 @@ const onSignIn = function (event) {
 
 const onSignOut = function (event) {
   event.preventDefault()
-  console.log('sign out ran')
 
   api.signOut()
     .then(ui.signOutSuccess)
@@ -37,12 +36,18 @@ const onSignOut = function (event) {
 
 const onChangePassword = function (event) {
   event.preventDefault()
-  console.log('change password ran!')
 
-  const data = getFormFields(this)
+  const form = event.target
+  const formData = getFormFields(form)
   api.changePassword(data)
     .then(ui.changePasswordSuccess)
     .catch(ui.changePasswordFailure)
+}
+
+const onReset = function (event) {
+  event.preventDefault()
+  api.reset()
+
 }
 
 module.exports = {

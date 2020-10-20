@@ -45,7 +45,8 @@
       <label>Password
         <input name="credentials[password]" type="password" value="">
       </label>
-      <button id="signinbutton">Sign In</button>
+      <input type="submit" id="signinbutton" value="Sign In">
+
     </fieldset>
   </form>
 
@@ -55,7 +56,7 @@
     <fieldset>
       <label>Change Password:</label>
       <label>Email
-        <input name="credentials[email]" type="text" value="">
+        <input name="credentials[email]" type="text">
       </label>
       <label>Old Password
         <input name="passwords[old]" type="password">
@@ -64,18 +65,16 @@
         <input name="passwords[new]" type="password">
       </label>
 
-      <button id="changepasswordbutton">Change Password</button>
+      <input type="submit" id="changepasswordbutton" value="Change Password">
     </fieldset>
   </form>
 
 
-  <div id="sign-out">
-    <button id="signoutbutton">Sign Out</button>
-  </div>
 
-  <div id="reset">
-    <button id="resetbutton">Reset</button>
-  </div>
+<input id="signoutbutton" type="submit" value="Sign Out">
+
+  <input id="resetbutton" type="submit" value="Reset">
+
 
 
   <section class="container">
