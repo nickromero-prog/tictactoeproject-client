@@ -5,7 +5,7 @@ const store = require('../store')
 
 const signUp = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/sign-up/',
+    url: config.apiUrl + '/sign-up',
     method: 'POST',
     data: data
   })
@@ -13,7 +13,7 @@ const signUp = function (data) {
 
 const signIn = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/sign-in/',
+    url: config.apiUrl + '/sign-in',
     method: 'POST',
     data: data
   })
