@@ -3,11 +3,11 @@
 const store = require('../store')
 
 const signUpSuccess = function (response) {
-  console.log(response)
+  $('#sign-up-message').text(response.user.email + 'signed up successfully')
 }
 
 const signUpFailure = function (error) {
-
+  $('#sign-up-message').text('Sign up unsuccesful, try again')
 }
 
 const signInSuccess = function (data) {

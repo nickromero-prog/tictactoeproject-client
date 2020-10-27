@@ -8,8 +8,8 @@ const ui = require('./ui')
 const onSignUp = function (event) {
   event.preventDefault()
   const form = event.target
-  const data = getFormFields(form)
-  api.signUp(data)
+  const data = getFormFields(form)// <---getFormFields(event.target) building the object
+  api.signUp(data)// <---the ajax request to create object into
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
 }
