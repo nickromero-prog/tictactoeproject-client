@@ -27,7 +27,7 @@
               <input id="sign-up-password_confirmation" type="password" name="credentials[password_confirmation]">
 
                 <input id="signupbutton" type="submit" value="Sign Up">
-                  <p id="sign-up-message"></p>
+                  <p id="message"></p>
 
     </fieldset>
   </form>
@@ -37,31 +37,31 @@
 
     <fieldset>
       <legend>Sign In</legend>
+
         <label for="sign-in-email">Email</label>
           <input id="sign-in-email" type="email" name="credentials[email]">
+
           <label for="sign-in-password">Password</label>
             <input id="sign-in-password" type="password" name="credentials[password]">
-            <label for="sign-in-password_confirmation">Password Confirmation</label>
-              <input id="sign-in-password_confirmation" type="password" name="credentials[password]">
+
                 <input id="signinbutton" type="submit" value="Sign In">
-                  <p id="sign-in-message"></p>
+
     </fieldset>
   </form>
 
 
   <form id="change-password">
 
-    <fieldset>
-      <label>Change Password:</label>
-      <label>Email
+      <fieldset>
+        <label>Change Password:</label>
+        <label for='change-password'>Email</label>
         <input name="credentials[email]" type="text">
-      </label>
-      <label>Old Password
-        <input name="passwords[old]" type="password">
-      </label>
-      <label>New Password
-        <input name="passwords[new]" type="password">
-      </label>
+        <label>Old Password
+          <input name="passwords[old]" type="password">
+        </label>
+        <label>New Password
+          <input name="passwords[new]" type="password">
+        </label>
 
       <input type="submit" id="changepasswordbutton" value="Change Password">
     </fieldset>
