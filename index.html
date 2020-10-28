@@ -13,6 +13,7 @@
 <body>
   <h1 id='title'>TIC x TAC x TOE</h1>
 
+  <p id="message"></p>
   <form id='sign-up-form'>
     <fieldset>
       <legend>Sign Up</legend>
@@ -27,7 +28,6 @@
               <input id="sign-up-password_confirmation" type="password" name="credentials[password_confirmation]">
 
                 <input id="signupbutton" type="submit" value="Sign Up">
-                  <p id="message"></p>
 
     </fieldset>
   </form>
@@ -65,12 +65,19 @@
     </fieldset>
   </form>
 
+  <form id="sign-out-form">
+      <fieldset>
+        <legend>Sign Out</legend>
+          <input type="submit" id="signoutbutton" value="Sign Out">
+      </fieldset>
+  </form>
 
-
-<input id="signoutbutton" type="submit" value="Sign Out">
-
-  <input id="resetbutton" type="submit" value="Reset">
-
+  <form id="reset-form">
+      <fieldset>
+        <legend>Reset</legend>
+          <input type="submit" id="resetbutton" value="Reset">
+      </fieldset>
+  </form>
 
 
   <section class="container">
