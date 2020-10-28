@@ -50,20 +50,18 @@
   </form>
 
 
-  <form id="change-password">
+  <form id="change-password-form">
 
       <fieldset>
-        <label>Change Password:</label>
-        <label for='change-password'>Email</label>
-        <input name="credentials[email]" type="text">
-        <label>Old Password
-          <input name="passwords[old]" type="password">
-        </label>
-        <label>New Password
-          <input name="passwords[new]" type="password">
-        </label>
+        <legend>Change Password</legend>
 
-      <input type="submit" id="changepasswordbutton" value="Change Password">
+          <label>Old Password</label>
+            <input name="passwords[old]" type="password">
+
+              <label>New Password</label>
+                <input name="passwords[new]" type="password">
+
+                  <input type="submit" id="changepasswordbutton" value="Change Password">
     </fieldset>
   </form>
 

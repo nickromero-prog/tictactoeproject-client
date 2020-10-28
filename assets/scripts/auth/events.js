@@ -6,7 +6,7 @@ const api = require('./api')
 const ui = require('./ui')
 
 const onSignUp = function (event) {
-  event.preventDefault()
+  event.preventDefault() // event=submit, so preventDefault the submit action
   const form = event.target
   const data = getFormFields(form)// <---getFormFields(event.target) building the object
   api.signUp(data)// <---the ajax request to create object into
@@ -15,7 +15,7 @@ const onSignUp = function (event) {
 }
 
 const onSignIn = function (event) {
-  event.preventDefault()
+  event.preventDefault() // event=submit, so preventDefault the submit action
   const form = event.target
   const data = getFormFields(form)// <---getFormFields(event.target) aquiring data to build object
   api.signIn(data)// <---the ajax request to create object into
@@ -24,7 +24,7 @@ const onSignIn = function (event) {
 }
 
 const onChangePassword = function (event) {
-  event.preventDefault()
+  event.preventDefault() // event=submit, so preventDefault the submit action
   const form = event.target
   const formData = getFormFields(form)
   api.changePassword(formData)
