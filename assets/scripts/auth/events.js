@@ -16,7 +16,11 @@ const onSignUp = function (event) {
 
 const onSignIn = function (event) {
   event.preventDefault()
-  console.log('fixed this reset too')
+  const form = event.target
+  const data = getFormFields(form)// <---getFormFields(event.target) aquiring data to build object
+  api.signIn(data)// <---the ajax request to create object into
+    .then(ui.signInSuccess)
+    .catch(ui.signInFailure)
 }
 
 const onChangePassword = function (event) {
