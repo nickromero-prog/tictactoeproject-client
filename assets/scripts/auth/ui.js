@@ -1,28 +1,22 @@
 'use strict'
 
-const store = require('../store')
+const store = require('./../store')
 
 const signUpSuccess = function (response) {
-  $('#sign-up-message').text(response.user.email + 'signed up successfully')
+  $('#message').text(response.user.email + 'signed up successfully')
 }
 
-const signUpFailure = function (error) {
-  $('#sign-up-message').text('Sign up unsuccesful, try again')
+const signUpFailure = function () {
+  $('#message').text('Sign up unsuccesful, try again')
 }
 
-const signInSuccess = function (data) {
-  $('#message').text('Signed in successfully')
-  $('#message').removeClass()
-  $('#message').addClass('success')
-  console.log('signInSuccess ran. Data is :', data)
-  store.user = data.user
+const signInSuccess = function (response) {
+  $('#message').text('You are signed in as ' + response.user.email)
+  store.user = response.user // log the user response data in store on a new key called 'user'
 }
 
-const signInFailure = function (error) {
-  $('#message').text('Error on sign in')
-  $('#message').removeClass()
-  $('#message').addClass('failure')
-  console.error('signInFailure ran. Error is :', error)
+const signInFailure = function () {
+  $('#message').text('Oh no something went wrong, try again or sign-up!')
 }
 
 const changePasswordSuccess = function () {
