@@ -10,7 +10,7 @@ const signUpFailure = function () {
   $('#message').text('Sign up unsuccesful, try again')
 }
 
-const signInSuccess = function (response) {
+const signInSuccess = function (response) { // response is the response from the api
   $('#message').text('You are signed in as ' + response.user.email)
   store.user = response.user // log the user response data in store on a new key called 'user'
   $('#sign-up-form').hide()
@@ -18,6 +18,8 @@ const signInSuccess = function (response) {
   $('#sign-out-form').show()
   $('#reset-form').show()
   $('#change-password-form').show()
+  $('#create-game-form').show()
+  $('#game-board').show()
 }
 
 const signInFailure = function () {
@@ -40,10 +42,20 @@ const signOutSuccess = function (response) {
   $('#sign-out-form').hide()
   $('#reset-form').hide()
   $('#change-password-form').hide()
+  $('#game-board').hide()
+  $('#create-game-form').hide()
 }
 
 const signOutFailure = function () {
   $('#message').text('Woops we could not sign you out')
+}
+
+const newGameSuccess = function () {
+  $('#message').text('New Game!')
+}
+
+const newGameFailure = function () {
+  $('#message').text('Woops we could not start a new game')
 }
 
 module.exports = {
@@ -54,5 +66,7 @@ module.exports = {
   signOutSuccess,
   signOutFailure,
   changePasswordSuccess,
-  changePasswordFailure
+  changePasswordFailure,
+  newGameSuccess,
+  newGameFailure
 }
