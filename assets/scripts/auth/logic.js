@@ -1,4 +1,6 @@
-const switchPlayer = function() {
+
+
+const switchPlayer = function () {
 
 }
 

@@ -4,6 +4,7 @@ const store = require('./../store')
 
 const signUpSuccess = function (response) {
   $('#message').text(response.user.email + 'signed up successfully')
+  $('#sign-up-form').trigger('reset')
 }
 
 const signUpFailure = function () {
@@ -20,6 +21,9 @@ const signInSuccess = function (response) { // response is the response from the
   $('#change-password-form').show()
   $('#create-game-form').show()
   $('#game-board').show()
+  $('#sign-in-email').text('')
+  $('#sign-in-password').text('')
+  $('#sign-in-form').trigger('reset')
 }
 
 const signInFailure = function () {
@@ -28,6 +32,7 @@ const signInFailure = function () {
 
 const changePasswordSuccess = function () {
   $('#message').text('You changed your password! But can you remember it? We shall see')
+  $('#change-password-form').trigger('reset')
 }
 
 const changePasswordFailure = function () {
@@ -51,7 +56,7 @@ const signOutFailure = function () {
 }
 
 const newGameSuccess = function () {
-  $('#message').text('New Game!')
+  $('#message').text('New Game! X goes first')
 }
 
 const newGameFailure = function () {
