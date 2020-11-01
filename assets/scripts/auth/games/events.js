@@ -3,6 +3,7 @@ const store = require('./../../store')
 const api = require('./api')
 const ui = require('./ui')
 
+let isOver = false
 let currentPlayer = 'X'
 const onClickBox = (event) => {
   // event.target is an object of the exact html you clicked on(aka the box including
@@ -35,5 +36,6 @@ const checkForWinner = function (event) {}
 module.exports = {
   onNewGame,
   onClickBox,
-  onIndexGames
+  onIndexGames,
+  checkForWinner
 }
