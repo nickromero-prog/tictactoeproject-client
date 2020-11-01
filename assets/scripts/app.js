@@ -11,6 +11,7 @@ $(() => {
   $('#change-password-form').hide()
   $('#sign-out-form').hide()
   $('#create-game-form').hide()
-  $('#create-game-form').on('submit', events.onNewGame)
+  $('#create-game-form').on('submit', gameEvents.onNewGame)
   $('.box').on('click', gameEvents.onClickBox)
+  $('#index-games').on('click', gameEvents.onIndexGames)
 })

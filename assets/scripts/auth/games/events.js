@@ -8,7 +8,7 @@ const onClickBox = (event) => {
   // event.target is an object of the exact html you clicked on(aka the box including
   // its id number and if x or 0 is in it)
   const box = $(event.target)// set the hmtl equal to box variable
-
+  api.changeGame(box.data('id'), currentPlayer, isOver)
   console.log('box is ', box)
   // Set the boxs  background to `transparent`
   // So we can see the image behind the box.
@@ -21,11 +21,19 @@ const onClickBox = (event) => {
 const onNewGame = function (event) {
   event.preventDefault()
   api.newGame()
-    .then(ui.newGameSuccess)
-    .catch(ui.newGameFailure)
+    .then(ui.newGameSuccess())
 }
+
+const onIndexGames = function (event) {
+  event.preventDefault()
+  api.indexGames()
+    .then(ui.indexGamesSuccess())
+}
+
+const checkForWinner = function (event) {}
 
 module.exports = {
   onNewGame,
-  onClickBox
+  onClickBox,
+  onIndexGames
 }
