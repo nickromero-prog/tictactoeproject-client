@@ -40,3 +40,9 @@ and touched them up with a color scheme and some extra special css properties.
 I also added a ternary operator to the clickbox function in the events in order
 to allow the current player variable to stay constant and the value change after each
 click.
+
+
+Future Problems:
+1) I would like to be able to allow the user to select whether to be x or o
+2) I would like to add messages in the correct spot next to buttons rather than in one place
+3) I would like for you to be able to play against a computer

@@ -24,6 +24,7 @@ const signInSuccess = function (response) { // response is the response from the
   $('#sign-in-email').text('')
   $('#sign-in-password').text('')
   $('#sign-in-form').trigger('reset')
+  $('#index-games').show()
 }
 
 const signInFailure = function () {

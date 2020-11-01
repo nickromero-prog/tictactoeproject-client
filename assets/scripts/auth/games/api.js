@@ -9,9 +9,17 @@ const newGame = function () {
   })
 }
 
+const showGame = function () {
+  return $.ajax({
+    url: config.apiUrl + '/games/' + store.game._id,
+    headers: { Authorization: 'Bearer ' + store.user.token },
+    method: 'GET'
+  })
+}
+
 const changeGame = function (index, currentPlayer, isOver) {
   return $.ajax({
-    url: config.apiUrl + '/games/:id' + store.game._id,
+    url: config.apiUrl + '/games/' + store.game._id,
     headers: { Authorization: 'Bearer ' + store.user.token },
     method: 'PATCH',
     data: {
@@ -37,5 +45,6 @@ const indexGames = function () {
 module.exports = {
   newGame,
   changeGame,
-  indexGames
+  indexGames,
+  showGame
 }
