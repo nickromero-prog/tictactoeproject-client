@@ -1,5 +1,5 @@
 'use strict'
-
+const gameEvents = require('./auth/games/events')
 const events = require('./auth/events')
 
 $(() => {
@@ -12,5 +12,5 @@ $(() => {
   $('#sign-out-form').hide()
   $('#create-game-form').hide()
   $('#create-game-form').on('submit', events.onNewGame)
-  $('.box').on('click', events.onClickBox)
+  $('.box').on('click', gameEvents.onClickBox)
 })

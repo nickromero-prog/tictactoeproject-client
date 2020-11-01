@@ -13,7 +13,7 @@ const signUpFailure = function () {
 
 const signInSuccess = function (response) { // response is the response from the api
   $('#message').text('You are signed in as ' + response.user.email)
-  store.user = response.user // log the user response data in store on a new key called 'user'
+  store.user = response.user //
   $('#sign-up-form').hide()
   $('#sign-in-form').hide()
   $('#sign-out-form').show()
