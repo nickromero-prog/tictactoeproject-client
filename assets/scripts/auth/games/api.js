@@ -37,8 +37,8 @@ const changeGame = function (index, currentPlayer, isOver) {
 const indexGames = function () {
   return $.ajax({
     url: config.apiUrl + '/games',
-    headers: { Authorization: 'Bearer ' + store.user.token },
-    method: 'GET'
+    method: 'GET',
+    headers: { Authorization: `Bearer ${store.user.token}` }
   })
 }
 
