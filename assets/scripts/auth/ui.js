@@ -20,7 +20,6 @@ const signInSuccess = function (response) { // response is the response from the
   $('#reset-form').show()
   $('#change-password-form').show()
   $('#create-game-form').show()
-  $('#game-board').show()
   $('#sign-in-email').text('')
   $('#sign-in-password').text('')
   $('#sign-in-form').trigger('reset')
@@ -50,18 +49,11 @@ const signOutSuccess = function (response) {
   $('#change-password-form').hide()
   $('#game-board').hide()
   $('#create-game-form').hide()
+  $('#index-games').hide()
 }
 
 const signOutFailure = function () {
   $('#message').text('Woops we could not sign you out')
-}
-
-const newGameSuccess = function () {
-  $('#message').text('New Game! X goes first')
-}
-
-const newGameFailure = function () {
-  $('#message').text('Woops we could not start a new game')
 }
 
 module.exports = {
@@ -72,7 +64,5 @@ module.exports = {
   signOutSuccess,
   signOutFailure,
   changePasswordSuccess,
-  changePasswordFailure,
-  newGameSuccess,
-  newGameFailure
+  changePasswordFailure
 }

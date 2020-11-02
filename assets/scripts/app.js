@@ -13,6 +13,6 @@ $(() => {
   $('#create-game-form').hide()
   $('#create-game-form').on('submit', gameEvents.onNewGame)
   $('.box').on('click', gameEvents.onClickBox)
-  $('#index-games').on('click', gameEvents.onIndexGames)
   $('#index-games').hide()
+  $('#index-games').on('click', gameEvents.onIndexGames)
 })

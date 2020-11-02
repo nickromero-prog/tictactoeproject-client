@@ -28,7 +28,7 @@ const changeGame = function (index, currentPlayer, isOver) {
           index: index,
           value: currentPlayer
         },
-        over: isOver // boolean you need to set
+        over: isOver
       }
     }
   })

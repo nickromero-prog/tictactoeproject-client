@@ -1,15 +1,23 @@
 
 const store = require('./../../store')
 const api = require('./api')
-const ui = require('./ui')
+const gameui = require('./gameui')
 
 const onNewGame = function (event) {
   event.preventDefault()
   api.newGame()
-    .then(ui.newGameSuccess())
+    .then(gameui.newGameSuccess)
+    .then($('#game-board').show())
 }
+// (res) => {
+//   store.game = res.game
+//   console.log(store.game._id)
+// }
+
 
 let isOver = false
+
+// let currentPlayer = 'X'
 let currentPlayer = 'X'
 
 const onClickBox = (event) => {
@@ -17,25 +25,24 @@ const onClickBox = (event) => {
   // its id number and if x or 0 is in it)
   const box = $(event.target) // set the hmtl equal to box variable
   const boxId = box.data('id')// data id of html clicked on
+  api.changeGame(boxId, currentPlayer, isOver)
+    .then(gameui.updateGameSuccess)
+
   box.css('background', 'transparent').text(currentPlayer)
-  api.changeGame(boxId, currentPlayer, isOver)// update the game
   // Change the current player
-  currentPlayer = currentPlayer === 'O' ? 'X' : 'O'
+  currentPlayer = (currentPlayer === 'O' ? 'X' : 'O')
 }
 
 const onIndexGames = function (event) {
   event.preventDefault()
   api.indexGames()
-    .then(ui.indexGamesSuccess())
+    .then(gameui.indexGamesSuccess())
 }
 
-const checkForWinner = function (event) {
 
-}
 
 module.exports = {
   onNewGame,
   onClickBox,
-  onIndexGames,
-  checkForWinner
+  onIndexGames
 }
