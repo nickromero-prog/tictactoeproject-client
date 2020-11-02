@@ -1,42 +1,59 @@
 'use strict'
 
-const store = require('../store')
+const store = require('./../store')
 
 const signUpSuccess = function (response) {
-  console.log(response)
+  $('#message').text(response.user.email + 'signed up successfully')
+  $('#sign-up-form').trigger('reset')
 }
 
-const signUpFailure = function (error) {
-
+const signUpFailure = function () {
+  $('#message').text('Sign up unsuccesful, try again')
 }
 
-const signInSuccess = function (data) {
-  $('#message').text('Signed in successfully')
-  $('#message').removeClass()
-  $('#message').addClass('success')
-  console.log('signInSuccess ran. Data is :', data)
-  store.user = data.user
+const signInSuccess = function (response) { // response is the response from the api
+  $('#message').text('You are signed in as ' + response.user.email)
+  store.user = response.user //
+  $('#sign-up-form').hide()
+  $('#sign-in-form').hide()
+  $('#sign-out-form').show()
+  $('#reset-form').show()
+  $('#change-password-form').show()
+  $('#create-game-form').show()
+  $('#sign-in-email').text('')
+  $('#sign-in-password').text('')
+  $('#sign-in-form').trigger('reset')
+  $('#index-games').show()
 }
 
-const signInFailure = function (error) {
-  $('#message').text('Error on sign in')
-  $('#message').removeClass()
-  $('#message').addClass('failure')
-  console.error('signInFailure ran. Error is :', error)
+const signInFailure = function () {
+  $('#message').text('Oh no something went wrong, try again or sign-up!')
 }
 
 const changePasswordSuccess = function () {
-  $('#message').text('Changed password successfully')
-  $('#message').removeClass()
-  $('#message').addClass('success')
-  console.log('changePasswordSuccess ran and nothing was returned!')
+  $('#message').text('You changed your password! But can you remember it? We shall see')
+  $('#change-password-form').trigger('reset')
 }
 
-const changePasswordFailure = function (error) {
-  $('#message').text('Error on change password')
-  $('#message').removeClass()
-  $('#message').addClass('failure')
-  console.error('changePasswordFailure ran. Error is :', error)
+const changePasswordFailure = function () {
+  $('#message').text('Woops we could not change your password! Try again!')
+}
+
+const signOutSuccess = function (response) {
+  $('#message').text('You are signed out! See you later!')
+  store.user = null // reset the user to nothing and erase token
+  $('#sign-up-form').show()
+  $('#sign-in-form').show()
+  $('#sign-out-form').hide()
+  $('#reset-form').hide()
+  $('#change-password-form').hide()
+  $('#game-board').hide()
+  $('#create-game-form').hide()
+  $('#index-games').hide()
+}
+
+const signOutFailure = function () {
+  $('#message').text('Woops we could not sign you out')
 }
 
 module.exports = {
@@ -44,6 +61,8 @@ module.exports = {
   signUpFailure,
   signInSuccess,
   signInFailure,
+  signOutSuccess,
+  signOutFailure,
   changePasswordSuccess,
   changePasswordFailure
 }

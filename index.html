@@ -13,6 +13,7 @@
 <body>
   <h1 id='title'>TIC x TAC x TOE</h1>
 
+  <p id="message"></p>
   <form id='sign-up-form'>
     <fieldset>
       <legend>Sign Up</legend>
@@ -24,10 +25,9 @@
             <input id="sign-up-password" type="password" name="credentials[password]">
 
             <label for="sign-up-password_confirmation">Password Confirmation</label>
-              <input id="sign-up-password_confirmation" type="password" name="credentials[password]">
+              <input id="sign-up-password_confirmation" type="password" name="credentials[password_confirmation]">
 
                 <input id="signupbutton" type="submit" value="Sign Up">
-                  <p id="message"></p>
 
     </fieldset>
   </form>
@@ -37,63 +37,71 @@
 
     <fieldset>
       <legend>Sign In</legend>
+
         <label for="sign-in-email">Email</label>
           <input id="sign-in-email" type="email" name="credentials[email]">
+
           <label for="sign-in-password">Password</label>
             <input id="sign-in-password" type="password" name="credentials[password]">
-            <label for="sign-in-password_confirmation">Password Confirmation</label>
-              <input id="sign-in-password_confirmation" type="password" name="credentials[password]">
+
                 <input id="signinbutton" type="submit" value="Sign In">
-                  <p id="message"></p>
+
     </fieldset>
   </form>
 
 
-  <form id="change-password">
+  <form id="change-password-form">
 
-    <fieldset>
-      <label>Change Password:</label>
-      <label>Email
-        <input name="credentials[email]" type="text">
-      </label>
-      <label>Old Password
-        <input name="passwords[old]" type="password">
-      </label>
-      <label>New Password
-        <input name="passwords[new]" type="password">
-      </label>
+      <fieldset>
+        <legend>Change Password</legend>
 
-      <input type="submit" id="changepasswordbutton" value="Change Password">
+          <label>Old Password</label>
+            <input name="passwords[old]" type="password">
+
+              <label>New Password</label>
+                <input name="passwords[new]" type="password">
+
+                  <input type="submit" id="changepasswordbutton" value="Change Password">
     </fieldset>
   </form>
 
+  <form id="sign-out-form">
+      <fieldset>
+        <legend>Sign Out</legend>
+          <input type="submit" id="signoutbutton" value="Sign Out">
+      </fieldset>
+  </form>
 
+    <form id="create-game-form">
+       <input type="submit" value="Play New Game!"></input>
+     </form>
 
-<input id="signoutbutton" type="submit" value="Sign Out">
-
-  <input id="resetbutton" type="submit" value="Reset">
-
+     <button id="index-games">See My Games</button>
 
 
   <section class="container">
 
-    <div class= "row board h-100">
+    <div id="game-board" class= "row board h-100">
 
-        <div class="col-4 box"></div>
-        <div class="col-4 box"></div>
-        <div class="col-4 box"></div>
+        <div data-id='0' class="col-4 box"></div>
+        <div data-id='1' class="col-4 box"></div>
+        <div data-id='2' class="col-4 box"></div>
 
-        <div class="col-4 box"></div>
-        <div class="col-4 box"></div>
-        <div class="col-4 box"></div>
 
-        <div class="col-4 box"></div>
-        <div class="col-4 box"></div>
-        <div class="col-4 box"></div>
+        <div data-id='3' class="col-4 box"></div>
+        <div data-id='4' class="col-4 box"></div>
+        <div data-id='5' class="col-4 box"></div>
+
+
+        <div data-id='6' class="col-4 box"></div>
+        <div data-id='7' class="col-4 box"></div>
+        <div data-id='8' class="col-4 box"></div>
 
     </div>
 
   </section>
+
+
 
 
 </body>
